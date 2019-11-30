@@ -1,10 +1,9 @@
-﻿using ApplicationCore.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace ApplicationCore.Entities
+namespace ApplicationCore.DTOs
 {
-    public partial class User : IAggregateRoot
+    public partial class UserDto
     {
         public int UserId { get; set; }
         public int? UserPermissionId { get; set; }
@@ -12,7 +11,7 @@ namespace ApplicationCore.Entities
         public string UserPassword { get; set; }
         public int? UserCustomerId { get; set; }
 
-        public virtual Customer UserCustomer { get; set; }
-        public virtual Permission UserPermission { get; set; }
+        public virtual CustomerDto UserCustomer { get; set; }
+        public virtual PermissionDto UserPermission { get; set; }
     }
 }

@@ -12,19 +12,20 @@ namespace Web.Pages.Register
     public class DangKyModel : PageModel
     {
         //private readonly CustomerService _service1;
-        private readonly ProductService _service2;
+        private readonly RegisterService _service;
 
-       // public DangKyModel(CustomerService service1, ProductService service2)
-        //{
-         //   _service1 = service1;
-        //    _service2 = service2;
-        //}
+        public DangKyModel(RegisterService service)
+        {
+            _service = service;
+          
+        }
 
         public IActionResult OnGet()
         {
             return Page();
         }
-
+        [BindProperty]
+        public UserDto User { get; set; }
         [BindProperty]
         public CustomerDto Customer { get; set; }
         [BindProperty]
@@ -40,11 +41,26 @@ namespace Web.Pages.Register
                 return Page();
             }
 
-            //_service1.CreateCustomer(Customer);
-            _service2.CreateProduct(Product);
+            
+           
+
+           Customer.CustomerId = 2;
+            Customer.Name = "huy";
+
+            Customer.Phone = "321312";
+            Customer.Email = "321312";
+            Customer.Address = "321312";
+
+            User.UserCustomerId = Customer.CustomerId;
+            User.UserPermissionId = 1;
+            User.UserName = "huy";
+            User.UserPassword = "1232";
+            User.UserCustomerId = 1;
+
+            _service.CreateRegister(User, Customer);
 
 
-            return RedirectToPage("/Customers/Index");
+            return Page();
         }
        
     }

@@ -24,7 +24,10 @@ namespace Infrastructure.Persistence
        
 
         public IProductRepository Products { get; private set; }
-       // public ICustomerRepository Customers { get; private set; }
+
+        public IRegisterRepository Registers { get; private set; }
+
+        // public ICustomerRepository Customers { get; private set; }
 
         //khai bao interface Reponsitory
 

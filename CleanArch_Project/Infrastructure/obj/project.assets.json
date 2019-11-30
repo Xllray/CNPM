@@ -1226,11 +1226,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\CleanArch_Project\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Share\\CNPM\\CleanArch_Project\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\Administrator\\Desktop\\CleanArch_Project\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "C:\\Users\\Administrator\\Desktop\\Share\\CNPM\\CleanArch_Project\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Desktop\\CleanArch_Project\\Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\Administrator\\Desktop\\Share\\CNPM\\CleanArch_Project\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1249,8 +1249,8 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "C:\\Users\\Administrator\\Desktop\\CleanArch_Project\\ApplicationCore\\ApplicationCore.csproj": {
-              "projectPath": "C:\\Users\\Administrator\\Desktop\\CleanArch_Project\\ApplicationCore\\ApplicationCore.csproj"
+            "C:\\Users\\Administrator\\Desktop\\Share\\CNPM\\CleanArch_Project\\ApplicationCore\\ApplicationCore.csproj": {
+              "projectPath": "C:\\Users\\Administrator\\Desktop\\Share\\CNPM\\CleanArch_Project\\ApplicationCore\\ApplicationCore.csproj"
             }
           }
         }

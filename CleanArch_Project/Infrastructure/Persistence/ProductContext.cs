@@ -14,7 +14,7 @@ namespace Infrastructure.Persistence
          
 
             public DbSet<Product> Product { get; set; }
-             public DbSet<TypeProduct> TypeProduct { get; set; }
+           
             public DbSet<Provider> Provider{ get; set; }
             public DbSet<Customer> Customer { get; set; }
             public DbSet<Order> Order { get; set; }

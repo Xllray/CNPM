@@ -15,7 +15,7 @@ namespace ApplicationCore.Mapping
                 ProductTypeName=Product.ProductTypeName,
                 ProductPrice =Product.ProductPrice,
                 ProductQuantity=Product.ProductQuantity,
-                ProductTypeId = Product.ProductTypeId,
+               
 
                 ProductImage =Product.ProductImage,
                 ProductDescription =Product.ProductDescription,
@@ -44,7 +44,7 @@ namespace ApplicationCore.Mapping
                 ProductPrice = ProductDto.ProductPrice,
                 ProductQuantity = ProductDto.ProductQuantity,
                 ProductTypeName = ProductDto.ProductTypeName,
-                ProductTypeId = ProductDto.ProductTypeId,
+                
                 ProductImage = ProductDto.ProductImage,
                 ProductDescription = ProductDto.ProductDescription,
                
@@ -63,7 +63,7 @@ namespace ApplicationCore.Mapping
 
             Product.ProductImage = ProductDto.ProductImage;
             Product.ProductDescription = ProductDto.ProductDescription;
-            Product.ProductTypeId = ProductDto.ProductTypeId;
+           
             Product.ProductProviderId = ProductDto.ProductProviderId;
 
 

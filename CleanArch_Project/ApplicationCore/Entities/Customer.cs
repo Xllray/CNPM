@@ -1,9 +1,11 @@
-﻿using System;
+﻿using ApplicationCore.DTOs;
+using ApplicationCore.Interfaces;
+using System;
 using System.Collections.Generic;
 
 namespace ApplicationCore.Entities
 {
-    public partial class Customer
+    public partial class Customer : IAggregateRoot
     {
         public Customer()
         {

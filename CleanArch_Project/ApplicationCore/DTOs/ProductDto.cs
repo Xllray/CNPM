@@ -21,7 +21,7 @@ namespace ApplicationCore.DTOs
         public string ProductImage { get; set; }
 
         public string ProductDescription { get; set; }
-        public int? ProductTypeId { get; set; }
+        
         
 
         public int? ProductProviderId { get; set; }

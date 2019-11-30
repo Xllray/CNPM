@@ -758,11 +758,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\CleanArch_Project\\ApplicationCore\\ApplicationCore.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\Share\\CNPM\\CleanArch_Project\\ApplicationCore\\ApplicationCore.csproj",
       "projectName": "ApplicationCore",
-      "projectPath": "C:\\Users\\Administrator\\Desktop\\CleanArch_Project\\ApplicationCore\\ApplicationCore.csproj",
+      "projectPath": "C:\\Users\\Administrator\\Desktop\\Share\\CNPM\\CleanArch_Project\\ApplicationCore\\ApplicationCore.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\Desktop\\CleanArch_Project\\ApplicationCore\\obj\\",
+      "outputPath": "C:\\Users\\Administrator\\Desktop\\Share\\CNPM\\CleanArch_Project\\ApplicationCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
