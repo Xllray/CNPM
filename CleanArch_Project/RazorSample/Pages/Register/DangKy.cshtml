@@ -1,0 +1,25 @@
+﻿@page
+@model Web.Pages.Register.DangKyModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DangKy</title>
+</head>
+<body>
+
+    <form method="post">
+
+        <input type="text" asp-for="Customer.Name" />
+        <input type="text" asp-for="Product.ProductName" />
+        <input type="text" asp-for="Product.ProductPrice"/>
+        <input type="submit" value="Register"/>
+    </form>
+
+</body>
+</html>
