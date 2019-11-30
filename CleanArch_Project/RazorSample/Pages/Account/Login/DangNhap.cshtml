@@ -1,0 +1,27 @@
+﻿@page
+@model Web.Pages.Login.DangNhapModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DangNhap</title>
+</head>
+<body>
+
+    <form method="post">
+        <label asp-for="User.UserName" title="User.UserName" />
+        <input type="text" asp-for="User.UserName" />
+        <label asp-for="User.UserPassword" title="User.UserPassword" />
+        <input type="text" asp-for="User.UserPassword" />
+
+        <input type="submit" value="Dang Nhap" />
+
+
+    </form>
+</body>
+</html>

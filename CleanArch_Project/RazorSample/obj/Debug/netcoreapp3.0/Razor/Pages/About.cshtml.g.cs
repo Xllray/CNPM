@@ -12,8 +12,22 @@ namespace Web.Pages
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
+#line 1 "C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\Pages\_ViewImports.cshtml"
+using Web;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\Pages\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Http;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"543eddc991075064ac7b4e9fd795f9bfbf8e3e30", @"/Pages/About.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"02b8c73c5439d639bb601a8a88c7a82496c23084", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"698925b7a25e51f4c42f09fd3cd7da48aad8b6e6", @"/Pages/_ViewImports.cshtml")]
     public class Pages_About : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         #pragma warning disable 1998

@@ -241,7 +241,6 @@ C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debu
 C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debug\netcoreapp3.0\Razor\Pages\Index.cshtml.g.cs
 C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debug\netcoreapp3.0\Razor\Pages\Products\Details.cshtml.g.cs
 C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debug\netcoreapp3.0\Razor\Pages\Products\Index.cshtml.g.cs
-C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debug\netcoreapp3.0\Razor\Pages\Register\DangKy.cshtml.g.cs
 C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debug\netcoreapp3.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debug\netcoreapp3.0\Razor\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debug\netcoreapp3.0\Razor\Pages\_ViewImports.cshtml.g.cs
@@ -378,3 +377,5 @@ C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\bin\Debu
 C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\bin\Debug\netcoreapp3.0\Infrastructure.pdb
 C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debug\netcoreapp3.0\Web.Views.pdb
 C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debug\netcoreapp3.0\Web.csproj.CopyComplete
+C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debug\netcoreapp3.0\Razor\Pages\Account\Login\DangNhap.cshtml.g.cs
+C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debug\netcoreapp3.0\Razor\Pages\Account\Register\DangKy.cshtml.g.cs

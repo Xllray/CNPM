@@ -11,7 +11,7 @@ namespace Infrastructure.Persistence
         public UnitOfWork(ProductContext context)
         {
             Products = new ProductRepository(context);
-            //Customers = new CustomerRepository(context);
+            Users = new UserRepository(context);
 
 
             //khai bao user reponsitory
@@ -24,8 +24,9 @@ namespace Infrastructure.Persistence
        
 
         public IProductRepository Products { get; private set; }
+        public IUserRepository Users { get; private set; }
 
-        public IRegisterRepository Registers { get; private set; }
+      
 
         // public ICustomerRepository Customers { get; private set; }
 

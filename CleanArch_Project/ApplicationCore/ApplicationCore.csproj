@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Entities\Product.cs~RF1a5f1c2.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="microsoft.entityframeworkcore" Version="3.0.0" />
   </ItemGroup>
 

@@ -7,7 +7,9 @@ namespace ApplicationCore.Interfaces
        
         IProductRepository Products { get; }
       
-        IRegisterRepository Registers{ get; }
+       
+
+        IUserRepository Users { get; }
         int Complete();
     }
 }

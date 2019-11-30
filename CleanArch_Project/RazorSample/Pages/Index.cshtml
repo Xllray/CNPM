@@ -5,3 +5,32 @@
 }
 
 <h1>Home Page</h1>
+
+@section headers{
+
+
+    @if (@HttpContext.Session.GetString("username") != null)
+    {
+        <p>xin chao <a asp-page="/users/details" asp-route-id="@HttpContext.Session.GetString("userid")">@HttpContext.Session.GetString("username")</a></p>
+
+        <form method="post">
+            <input asp-page="/Account/Login/Dangnhap" asp-page-handler="logout" type="submit" value="Log out" />
+
+        </form>
+
+
+
+    }
+    else    //chua dang nhap
+    {
+        <a asp-page="Account/Login/DangNhap">Dang nhap</a>
+        <a asp-page="Account/Register/DangKy">Dang ky </a>
+    }
+
+    <!--Search -->
+    <form method="get">
+
+        <input type="text" asp-for="CurrentFilterProduct"/>
+        <input asp-page="/Products/index" type="submit" value="Search" class="btn btn-default" />
+    </form>
+}

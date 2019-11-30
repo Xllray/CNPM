@@ -9,9 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Web.Services;
 using Microsoft.Extensions.Configuration;
 using ApplicationCore.Services;
-
-
-
+using System;
 
 namespace Web
 {
@@ -29,12 +27,12 @@ namespace Web
             
 
             services.AddScoped<IProductRepository, ProductRepository>();
-           // services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<IUserRepository,UserRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped< ProductListVmService>();
             services.AddScoped<ProductService>();
-            // services.AddScoped<CustomerListVmService>();
-            //  services.AddScoped<CustomerService>();
+            
+            services.AddScoped<UserService>();
 
 
            
@@ -42,6 +40,14 @@ namespace Web
                 options.UseSqlServer(Configuration.GetConnectionString("Project_OnlineShopContext")));
 
             services.AddRazorPages();
+
+            //cau hinh session
+            services.AddMemoryCache();
+            services.AddMvc();
+
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromMinutes(10);
+            });
 
 
             //  services.AddDbContext<WebContext>(options =>
@@ -59,6 +65,7 @@ namespace Web
 
             app.UseRouting();
 
+            app.UseSession();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

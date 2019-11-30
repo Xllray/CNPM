@@ -12,8 +12,22 @@ namespace Web.Pages.Products
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
+#line 1 "C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\Pages\_ViewImports.cshtml"
+using Web;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\Pages\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Http;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8896e05da98c52e806d1abea1343c722367150bc", @"/Pages/Products/Details.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"02b8c73c5439d639bb601a8a88c7a82496c23084", @"/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"698925b7a25e51f4c42f09fd3cd7da48aad8b6e6", @"/Pages/_ViewImports.cshtml")]
     public class Pages_Products_Details : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-page", "./Edit", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -148,7 +162,7 @@ namespace Web.Pages.Products
 #line hidden
 #nullable disable
             WriteLiteral("\r\n        </dd>\r\n       \r\n        \r\n    </dl>\r\n</div>\r\n<div>\r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8896e05da98c52e806d1abea1343c722367150bc8046", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8896e05da98c52e806d1abea1343c722367150bc8448", async() => {
                 WriteLiteral("Edit");
             }
             );
@@ -179,7 +193,7 @@ namespace Web.Pages.Products
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral(" |\r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8896e05da98c52e806d1abea1343c722367150bc10223", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8896e05da98c52e806d1abea1343c722367150bc10625", async() => {
                 WriteLiteral("Back to List");
             }
             );
