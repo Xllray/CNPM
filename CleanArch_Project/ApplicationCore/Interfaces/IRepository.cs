@@ -8,9 +8,9 @@ namespace ApplicationCore.Interfaces
     {
         T GetBy(int id);
         IEnumerable<T> GetAll();
-        IEnumerable<T> Find(Expression<Func<T, bool>> predicate);
+            IEnumerable<T> Find(Expression<Func<T, bool>> predicate);
 
-        void Add(T entity);
+         void Add(T entity);
         void AddRange(IEnumerable<T> entities);
 
         void Remove(T entity);

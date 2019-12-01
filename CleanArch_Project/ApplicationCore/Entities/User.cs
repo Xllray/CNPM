@@ -10,7 +10,7 @@ namespace ApplicationCore.Entities
         public int? UserPermissionId { get; set; }
         public string UserName { get; set; }
         public string UserPassword { get; set; }
-        public int? UserCustomerId { get; set; }
+        public int UserCustomerId { get; set; }
 
         public virtual Customer UserCustomer { get; set; }
         public virtual Permission UserPermission { get; set; }

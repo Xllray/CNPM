@@ -13,7 +13,7 @@ namespace ApplicationCore.Services
     public class ProductService
     {
         private readonly IUnitOfWork   _unitOfWork;
-
+        
         public ProductService(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
@@ -30,6 +30,14 @@ namespace ApplicationCore.Services
             var Products = _unitOfWork.Products.GetAll().ToList();
             return Products.ConvertToProductDtos();
         }
+
+        public IEnumerable<Product> GetListProducts()
+        {
+            var Products = _unitOfWork.Products.GetAll().ToList();
+            return Products;
+        }
+
+       
 
         public IEnumerable<ProductDto> GetProducts(string searchString, string genre)
         {

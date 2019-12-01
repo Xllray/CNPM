@@ -1,0 +1,108 @@
+﻿@page
+@model Web.Pages.Basket.ViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+</head>
+<body>
+
+    @if (Model.cart == null)
+    {
+
+        //ko hien thi bang gio hanh
+    }
+
+    else
+    {
+        <div id="maincontent">
+            <div class="container">
+                <div>
+                    <h2 class="text-center">Chi tiết giỏ hàng</h2>
+
+
+                    <div class="container">
+                        <table id="cart" class="table table-hover table-condensed">
+                            <thead>
+                                <tr>
+                                    <th style="width:50%">Tên sản phẩm</th>
+                                    <th style="width:10%">Giá</th>
+                                    <th style="width:8%">Số lượng</th>
+                                    <th style="width:22%" class="text-center">Thành tiền</th>
+                                    <th style="width:10%"> </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var item in Model.cart)
+                                {
+                                    <tr>
+                                        <td data-th="Product">
+                                            <div class="row">
+                                                <div class="col-sm-2 hidden-xs">
+                                                    <img src="#" alt="Sản phẩm " class="img-responsive" width="100">
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <h4 class="nomargin">@item.Product.ProductName</h4>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-th="Price">$@item.Product.ProductPrice</td>
+                                        <td data-th="Quantity">
+                                            <input class="form-control text-center" value="@item.Quantity" type="number">
+                                        </td>
+                                        <td data-th="Subtotal" class="text-center">$@(item.Product.ProductPrice * item.Quantity)</td>
+                                        <td class="actions" data-th="">
+                                            <button class="btn btn-info btn-sm">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button class="btn btn-danger btn-sm">
+                                                <i class="fa fa-trash-o"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                }
+                                <tr>
+                                    <td colspan="6" align="right">Total</td>
+                                    <td align="center">$@Model.Total</td>
+                                </tr>
+                                <form method="post">
+                                    
+                                    <input asp-page-handler="thanhtoan" asp-page="/Basket/View" type="submit" value="ThanhToan" />
+
+                                </form>
+
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>
+                                        <a asp-page="/Products/index" class="btn btn-warning"><i class="fa fa-angle-left"></i> Tiếp tục mua hàng</a>
+                                    </td>
+                                    <td colspan="2" class="hidden-xs"> </td>
+                                    <td class="hidden-xs text-center">
+                                        <strong>Tổng tiền</strong>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="btn btn-success btn-block">Thanh toán <i class="fa fa-angle-right"></i></a>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+
+                        <p style="color:red">@Model.message</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+        <script src="~/js/slick.min.js"></script>
+    </body>
+</html>

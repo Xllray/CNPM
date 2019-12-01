@@ -1,9 +1,10 @@
-﻿using System;
+﻿using ApplicationCore.Interfaces;
+using System;
 using System.Collections.Generic;
 
 namespace ApplicationCore.Entities
 {
-    public partial class Order
+    public partial class Order : IAggregateRoot
     {
         public Order()
         {
@@ -11,7 +12,7 @@ namespace ApplicationCore.Entities
         }
 
         public int OrderId { get; set; }
-        public int? OrderCustomerId { get; set; }
+        public int OrderCustomerId { get; set; }
         public DateTime? OrderDate { get; set; }
 
         public virtual Customer OrderCustomer { get; set; }

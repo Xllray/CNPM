@@ -20,5 +20,16 @@ namespace Infrastructure.Persistence.Repositories
         {
             get { return Context as ProductContext; }
         }
+
+        public IEnumerable<Customer> GetListCustomer()
+        {
+            var customers= from p in ProductContext.Customer
+
+                       select p;
+
+
+
+            return customers.Distinct().ToList();
+        }
     }
 }

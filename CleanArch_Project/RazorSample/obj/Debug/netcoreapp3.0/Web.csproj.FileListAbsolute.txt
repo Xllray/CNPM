@@ -379,3 +379,8 @@ C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debu
 C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debug\netcoreapp3.0\Web.csproj.CopyComplete
 C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debug\netcoreapp3.0\Razor\Pages\Account\Login\DangNhap.cshtml.g.cs
 C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debug\netcoreapp3.0\Razor\Pages\Account\Register\DangKy.cshtml.g.cs
+C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\bin\Debug\netcoreapp3.0\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debug\netcoreapp3.0\Razor\Pages\Basket\View.cshtml.g.cs
+C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debug\netcoreapp3.0\Razor\Pages\Account\Logout\DangXuat.cshtml.g.cs

@@ -25,8 +25,8 @@
     }
     else    //chua dang nhap
     {
-        <a asp-page="Account/Login/DangNhap">Dang nhap</a>
-        <a asp-page="Account/Register/DangKy">Dang ky </a>
+        <a asp-page="/Account/Login/DangNhap">Dang nhap</a>
+        <a asp-page="/Account/Register/DangKy">Dang ky </a>
     }
 
     <!--Search -->
@@ -99,18 +99,14 @@
         float: initial;
     }
 </style>
-<p>
-    <a asp-page="./Create">Create New</a>
-</p>
+
 
 <form method="get">
     <p>
         <select asp-for="typeid" asp-items="Model.ProductIndexVM.Genres">
             <option value="">All</option>
         </select>
-        <select asp-for="typename" asp-items="Model.ProductIndexVM.Provider">
-            <option value="">All</option>
-        </select>
+       
         Find by name: <input type="text" asp-for="CurrentFilterProduct" />
         <input type="submit" />
     </p>
@@ -134,7 +130,12 @@
                 <p> @Product.ProductName</p>
             </a>
             <p class="price">@Product.ProductPrice</p>
-            <p><button>Add to Cart</button></p>
+            <p>
+                <button>
+                    <a asp-page="/Basket/View" asp-page-handler="buynow"
+                       asp-route-id=@Product.ProductId >Buy Now</a>
+                </button>
+            </p>
         </div>
 
     }

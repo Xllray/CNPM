@@ -1,9 +1,10 @@
-﻿using System;
+﻿using ApplicationCore.Interfaces;
+using System;
 using System.Collections.Generic;
 
 namespace ApplicationCore.Entities
 {
-    public partial class OrderDetail
+    public partial class OrderDetail : IAggregateRoot
     {
         public int OrderDetailId { get; set; }
         public int? DetailProductId { get; set; }

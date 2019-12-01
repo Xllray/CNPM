@@ -10,6 +10,12 @@ namespace ApplicationCore.Interfaces
        
 
         IUserRepository Users { get; }
+
+        ICustomerRepository Customers { get; }
+
+        IOrderRepository Orders { get; }
+
+        IOrderDetailRepository OrderDetails { get; }
         int Complete();
     }
 }

@@ -6,19 +6,31 @@ using ApplicationCore.DTOs;
 using ApplicationCore.Entities;
 using ApplicationCore.Interfaces;
 using ApplicationCore.Mapping;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore.Query.Internal;
+
 
 namespace ApplicationCore.Services
 {
     public class UserService
     {
         private readonly IUnitOfWork   _unitOfWork;
-
+        
+       
+        
         public UserService(IUnitOfWork unitOfWork)
+
         {
             _unitOfWork = unitOfWork;
+
+           
+             
         }
 
+        //dang ky
+        
+       
+        
         public UserDto GetUser(int id)
         {
             var User = _unitOfWork.Users.GetBy(id);
@@ -29,10 +41,39 @@ namespace ApplicationCore.Services
         {
             var Users = _unitOfWork.Users.GetAll().ToList();
             return Users.ConvertToUserDtos();
+
+           
         }
 
+        //dang nhap
+
+        public User Login(String username,String password)
+        {
+            var users = _unitOfWork.Users.GetAll().ToList<User>();
+
+            foreach (var item in users)
+            {
+                if (username == item.UserName && password == item.UserPassword)
+                {
+                    return item;
+                }
+
+            }
+            return null;
+        }
+        //dang ky
+        public void dangky(Customer customer,User user)
+        {
+            _unitOfWork.Customers.Add(customer);
+            _unitOfWork.Complete();
+
+            user.UserCustomerId = customer.CustomerId;
+            user.UserPermissionId = 3;
+
+            _unitOfWork.Users.Add(user);
+            _unitOfWork.Complete();
+        }
        
-        
         public void CreateUser(UserDto UserDto)
         {
             var User = UserDto.ConvertToUser();

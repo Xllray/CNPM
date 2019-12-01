@@ -14,13 +14,21 @@ namespace Web.Pages.Register
 {
     public class DangKyModel : PageModel
     {
-        //private readonly CustomerService _service1;
+        private readonly UserService _service;
+        /*
         private readonly ProductContext _context;
 
         public DangKyModel(ProductContext context)
         {
             _context = context;
           
+        }
+        */
+       
+        public DangKyModel(UserService service)
+        {
+            _service = service;
+
         }
 
         public IActionResult OnGet()
@@ -45,27 +53,12 @@ namespace Web.Pages.Register
             }
 
 
+           
+          
+             _service.dangky(Customer, User);
 
 
-            _context.Customer.Add(Customer);
-
-            await _context.SaveChangesAsync();
-
-
-
-            User.UserCustomerId = Customer.CustomerId;
-            User.UserPermissionId = 3;
-
-
-
-
-
-            _context.User.Add(User);
-
-            await _context.SaveChangesAsync();
-
-
-            return Page();
+            return RedirectToPage("/Account/Login/DangNhap");
         }
        
     }

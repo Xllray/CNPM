@@ -14,7 +14,7 @@
         <p>xin chao <a asp-page="/users/details" asp-route-id="@HttpContext.Session.GetString("userid")">@HttpContext.Session.GetString("username")</a></p>
 
         <form method="post">
-            <input asp-page="/Account/Login/Dangnhap" asp-page-handler="logout" type="submit" value="Log out" />
+            <input asp-page="/Account/Logout/DangXuat" type="submit" value="Log out" />
 
         </form>
 
@@ -23,8 +23,8 @@
     }
     else    //chua dang nhap
     {
-        <a asp-page="Account/Login/DangNhap">Dang nhap</a>
-        <a asp-page="Account/Register/DangKy">Dang ky </a>
+        <a asp-page="/Account/Login/DangNhap">Dang nhap</a>
+        <a asp-page="/Account/Register/DangKy">Dang ky </a>
     }
 
     <!--Search -->

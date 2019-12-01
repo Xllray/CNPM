@@ -28,14 +28,18 @@ namespace Web
 
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IUserRepository,UserRepository>();
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped< ProductListVmService>();
             services.AddScoped<ProductService>();
-            
+            services.AddScoped<OrderService>();
+
+
             services.AddScoped<UserService>();
+            
 
 
-           
+
             services.AddDbContext<ProductContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("Project_OnlineShopContext")));
 

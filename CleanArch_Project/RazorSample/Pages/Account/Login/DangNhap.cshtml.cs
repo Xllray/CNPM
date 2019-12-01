@@ -22,39 +22,36 @@ namespace Web.Pages.Login
         {
             _service = service;
         }
-
+        
 
         [BindProperty]
         public User User { get; set; }
         
-        public void OnPostLogout()
-        {
-            HttpContext.Session.Remove("username");
-
-        }
-
-
+       
+        
         public IActionResult OnPost()
         {
+            var item = _service.Login(User.UserName, User.UserPassword);
 
-            var users = _service.GetUsers().ToList<UserDto>();
-
-            foreach (var item in users)
+            if ( item != null)
             {
-                if (User.UserName == item.UserName && User.UserPassword == item.UserPassword)
-                {
-                    HttpContext.Session.SetString("username", item.UserName);
 
-                    HttpContext.Session.SetString("userid", item.UserId + "");
+                
+                HttpContext.Session.SetString("username", item.UserName);
+
+                HttpContext.Session.SetString("userid", item.UserId + "");
 
 
-                    return RedirectToPage("/Index");
-                }
-
+                return RedirectToPage("/Index");
             }
+            else
+            {
+                return Page();
+            }
+                   
+                
 
-
-            return Page();
         }
+        
     }
 }
