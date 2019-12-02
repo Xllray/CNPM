@@ -42,6 +42,9 @@ namespace Web.Pages.Register
         [BindProperty]
         public Product Product { get; set; }
 
+        [BindProperty(SupportsGet = true)]
+        public string message { get; set; }
+
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPost()
@@ -53,12 +56,18 @@ namespace Web.Pages.Register
             }
 
 
-           
+            if (_service.tontaiUsername(User))
+            {
+                _service.dangky(Customer, User);
+                return RedirectToPage("/Account/Login/DangNhap");
+            }
+            else
+            {
+                message = "UserName da ton tai roi";
+                return Page();
+            }
           
-             _service.dangky(Customer, User);
-
-
-            return RedirectToPage("/Account/Login/DangNhap");
+         
         }
        
     }

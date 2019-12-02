@@ -26,9 +26,10 @@ namespace Web.Pages.Login
 
         [BindProperty]
         public User User { get; set; }
-        
-       
-        
+
+        [BindProperty(SupportsGet = true)]
+        public string message { get; set; }
+
         public IActionResult OnPost()
         {
             var item = _service.Login(User.UserName, User.UserPassword);
@@ -46,6 +47,7 @@ namespace Web.Pages.Login
             }
             else
             {
+                message = "Username hoac Password khong dung .Moi nhap lai!";
                 return Page();
             }
                    

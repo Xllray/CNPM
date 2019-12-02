@@ -31,6 +31,7 @@ namespace Web
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped< ProductListVmService>();
+            services.AddScoped<UserVmService>();
             services.AddScoped<ProductService>();
             services.AddScoped<OrderService>();
 

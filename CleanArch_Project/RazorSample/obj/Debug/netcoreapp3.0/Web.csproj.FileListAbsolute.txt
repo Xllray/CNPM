@@ -384,3 +384,5 @@ C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\bin\Debu
 C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Primitives.dll
 C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debug\netcoreapp3.0\Razor\Pages\Basket\View.cshtml.g.cs
 C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debug\netcoreapp3.0\Razor\Pages\Account\Logout\DangXuat.cshtml.g.cs
+C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debug\netcoreapp3.0\Razor\Pages\Account\Info\Details.cshtml.g.cs
+C:\Users\Administrator\Desktop\Share\CNPM\CleanArch_Project\RazorSample\obj\Debug\netcoreapp3.0\Razor\Pages\Account\Info\Index.cshtml.g.cs

@@ -12,7 +12,9 @@ namespace Web.Pages.Account.Logout
         public void OnPost()
         {
             HttpContext.Session.Remove("username");
+            HttpContext.Session.Remove("userid");
         }
+    
 
     }
 }

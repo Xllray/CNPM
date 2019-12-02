@@ -37,6 +37,12 @@ namespace ApplicationCore.Services
             return User.ConvertToUserDto();
         }
 
+        public CustomerDto GetCustomer(int id)
+        {
+            var Customer = _unitOfWork.Customers.GetBy(id);
+            return Customer.ConvertToCustomerDto();
+        }
+
         public IEnumerable<UserDto> GetUsers()
         {
             var Users = _unitOfWork.Users.GetAll().ToList();
@@ -70,10 +76,38 @@ namespace ApplicationCore.Services
             user.UserCustomerId = customer.CustomerId;
             user.UserPermissionId = 3;
 
-            _unitOfWork.Users.Add(user);
-            _unitOfWork.Complete();
+            
+                    _unitOfWork.Users.Add(user);
+                    _unitOfWork.Complete();
+           
+            
+
+            
         }
-       
+
+        //kiem tra username ton tai
+        public bool tontaiUsername(User user)
+        {
+            var users = _unitOfWork.Users.GetAll().ToList<User>(); //lay danh sach user
+            foreach (var item in users)
+            {
+
+                if (user.UserName == item.UserName)
+                {
+                    return false;
+                }
+               
+            }
+
+
+            return true;
+        }
+        //get list productid
+        public List<int> GetProductIds(int orderid)
+        {
+            var list = _unitOfWork.OrderDetails.ListProductId(orderid).ToList<int>();
+            return list;
+        }
         public void CreateUser(UserDto UserDto)
         {
             var User = UserDto.ConvertToUser();

@@ -78,12 +78,12 @@ namespace ApplicationCore.Services
 
 
                 _unitOfWork.OrderDetails.Add(OrderDetail);
-
+                _unitOfWork.Complete();//luu database
             }
 
             cart.Clear(); //xoa gio hang
 
-            _unitOfWork.Complete();//luu database
+            
 
             //HttpContext.Session.Remove("cart");//xoa session gio hang
 

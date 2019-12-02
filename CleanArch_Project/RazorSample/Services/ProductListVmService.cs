@@ -6,6 +6,7 @@ using System;
 using System.Linq.Expressions;
 using ApplicationCore.Services;
 using ApplicationCore.DTOs;
+using System.Collections.Generic;
 
 namespace Web.Services
 {
@@ -32,16 +33,28 @@ namespace Web.Services
                 Products = PaginatedList<ProductDto>.Create(products, pageIndex, pageSize)
             };
         }
-        public ProductListVm GetProductIndexViewModel()
+
+        //lay danh sach san pham moi nhat
+        public ProductListVm GetListSPMoiNhat(int slSPmoi)
         {
-           
-          
-            var provider = _service.GetProvider();
+
+
+            var newspList = _service.GetListNewProducts();
+
+            List<Product> spnew = new List<Product>();
+            int tongsp = newspList.Count;
+
+            for (int i=tongsp -1; i>tongsp- slSPmoi-1 ; --i)
+            {
+                spnew.Add( newspList[i]);
+            }
+
+            
 
             return new ProductListVm
             {
                
-                Provider = new SelectList(provider)
+                ListProductsNew=spnew
                
             };
         }
@@ -51,44 +64,6 @@ namespace Web.Services
         }
 
 
-        /*
-        public MovieIndexVM GetMovieIndexViewModel(string searchString, string genre, int pageIndex = 1)
-        {           
-            Expression<Func<Movie, bool>> predicate = m => true;
-
-            if (!string.IsNullOrEmpty(searchString) && !string.IsNullOrEmpty(genre))
-            {
-                predicate = m => m.Genre == genre && m.Title.Contains(searchString);
-            }
-            else if (!string.IsNullOrEmpty(searchString))
-            {
-                predicate = m => m.Title.Contains(searchString);
-            }
-            else if(!string.IsNullOrEmpty(genre))
-            {
-                predicate = m => m.Genre == genre;
-            }
-
-            var movies = _unitOfWork.Movies.Find(predicate);
-            var genres = _unitOfWork.Movies.GetGenres();
-
-            return new MovieIndexVM
-            {
-                Genres = new SelectList(genres),
-                Movies = PaginatedList<Movie>.Create(movies, pageIndex, pageSize)
-            };
-        }
-
-        public void DeleteMovie(int id)
-        {
-            var movie = _unitOfWork.Movies.GetBy(id);
-            if (movie != null)
-            {
-                _unitOfWork.Movies.Remove(movie);
-                _unitOfWork.Complete();
-            }
-        }
-        */
-
+       
     } 
 }

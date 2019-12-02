@@ -1,0 +1,39 @@
+﻿@page
+@model Web.Pages.Account.Info.DetailsModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+    <div>
+        <h4>User</h4>
+
+
+        <p>Username :@Model.userVm.UserDto.UserName</p>
+
+        <p>Customer name: @Model.userVm.CustomerDto.Name</p>
+        <p>Email: @Model.userVm.CustomerDto.Email</p>
+        <p>Sdt: @Model.userVm.CustomerDto.Phone</p>
+
+        @foreach (var item in Model.userVm.ListProductId)
+        {
+
+            <p>@item.ToString()</p>
+        }
+
+    </div>
+    <div>
+       
+
+    </div>
+</body>
+</html>

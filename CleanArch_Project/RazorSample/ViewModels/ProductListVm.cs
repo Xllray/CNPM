@@ -1,6 +1,7 @@
 using ApplicationCore.DTOs;
 using ApplicationCore.Entities;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
 
 namespace Web.ViewModels
 {
@@ -11,5 +12,9 @@ namespace Web.ViewModels
 
 
         public PaginatedList<ProductDto> Products{ get;  set; }
+
+
+        //list san pham moi nhat
+        public IEnumerable<Product> ListProductsNew { get; set; }
     }
 }

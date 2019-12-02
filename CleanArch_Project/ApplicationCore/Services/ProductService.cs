@@ -33,12 +33,18 @@ namespace ApplicationCore.Services
 
         public IEnumerable<Product> GetListProducts()
         {
-            var Products = _unitOfWork.Products.GetAll().ToList();
+            var Products = _unitOfWork.Products.GetAll().ToList<Product>();
             return Products;
         }
 
-       
+        public List<Product> GetListNewProducts()
+        {
+            var Products = _unitOfWork.Products.GetAll().ToList<Product>();
+            return Products;
+        }
 
+
+        //get danh sach productDto
         public IEnumerable<ProductDto> GetProducts(string searchString, string genre)
         {
             
