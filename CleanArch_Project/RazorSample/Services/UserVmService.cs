@@ -6,6 +6,7 @@ using System;
 using System.Linq.Expressions;
 using ApplicationCore.Services;
 using ApplicationCore.DTOs;
+using System.Collections.Generic;
 
 namespace Web.Services
 {
@@ -19,21 +20,36 @@ namespace Web.Services
         {
             _service = UserService;
         }
-        public UserVm GetUserViewModel(int id)
+
+
+        
+        public UserVm GetUserViewModel(int id)  //id la userid
         {
             var Users = _service.GetUser(id);
-            var Customers = _service.GetCustomer(id);
-            var listProductid = _service.GetProductIds(id);
+
+            int customerId = _service.GetCustomerId(id);
+            var Customers = _service.GetCustomer(customerId);
+           // var listProductid = _service.GetProductIds(id);
+
+            //test list datetime
+            var listDateOrder = _service.GetDateOrder(id); //lay ra date theo userid
+
+            //int orderId = _service.GetOrderIdByDate(listDateOrder[0]);
+           
+            //var list = _service.GetProductsOrdered(orderId);  //lay ra Product theo date 
 
             return new UserVm
             {
                 UserDto=Users,
                 CustomerDto=Customers,
-                ListProductId=listProductid
-
+               
+                DateTimes= listDateOrder
+                
+               // ProductsOrdered =list
+                
             };
         }
-      
+        
         public void DeleteUser(int id)
         {
             _service.DeleteUser(id);

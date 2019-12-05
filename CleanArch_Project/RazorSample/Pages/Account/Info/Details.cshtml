@@ -15,7 +15,7 @@
 <body>
 
     <div>
-        <h4>User</h4>
+        <h4>User Profile</h4>
 
 
         <p>Username :@Model.userVm.UserDto.UserName</p>
@@ -24,11 +24,32 @@
         <p>Email: @Model.userVm.CustomerDto.Email</p>
         <p>Sdt: @Model.userVm.CustomerDto.Phone</p>
 
-        @foreach (var item in Model.userVm.ListProductId)
-        {
+      
 
-            <p>@item.ToString()</p>
-        }
+
+            @foreach (var item in Model.userVm.DateTimes)
+            {
+
+                <p style="color:red">Ngay da mua hang</p>
+
+                <p>Ban da mua hang luc : @item.ToString()</p>
+
+
+
+
+
+            }
+       
+
+
+
+
+
+
+
+
+
+
 
     </div>
     <div>

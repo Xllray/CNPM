@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using ApplicationCore.DTOs;
 using ApplicationCore.Entities;
 
 namespace ApplicationCore.Interfaces
@@ -8,6 +9,8 @@ namespace ApplicationCore.Interfaces
         IEnumerable<string> GetGenres();
 
         IEnumerable<int> GetProvider();
+
+        IEnumerable<Product> GetProductPriceDecrease();
 
     }
 }

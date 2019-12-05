@@ -35,6 +35,8 @@ namespace ApplicationCore.Services
         {
             var Order = _unitOfWork.Orders.GetBy(id);
             return Order.ConvertToOrderDto();
+
+           
         }
 
         public IEnumerable<OrderDto> GetOrders()

@@ -108,6 +108,33 @@ namespace ApplicationCore.Services
             var list = _unitOfWork.OrderDetails.ListProductId(orderid).ToList<int>();
             return list;
         }
+        public int GetCustomerId(int userId)
+        {
+            return _unitOfWork.Customers.GetCustomerid(userId);
+        }
+        //get list date order
+        public List<DateTime> GetDateOrder(int userId)
+        {
+            var list = _unitOfWork.Orders.GetListDate(userId).ToList<DateTime>();
+            return list;
+        }
+        //get orderid by datetime
+        public int GetOrderIdByDate(DateTime date)
+        {
+            int id = _unitOfWork.Orders.GetOrderIds(date);
+            return id;
+        }
+        //get list product in orderDetail
+
+        public List<Product> GetProductsOrdered(int orderid)
+        {
+            
+            var list = _unitOfWork.OrderDetails.GetProductOrderDetail(orderid);
+            
+
+            return list.ToList<Product>();
+
+        }
         public void CreateUser(UserDto UserDto)
         {
             var User = UserDto.ConvertToUser();

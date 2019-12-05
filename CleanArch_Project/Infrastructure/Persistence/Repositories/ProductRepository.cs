@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using ApplicationCore.Entities;
 using ApplicationCore.Interfaces;
 using Microsoft.EntityFrameworkCore;
-
+using ApplicationCore.DTOs;
 
 namespace Infrastructure.Persistence.Repositories
 {
@@ -36,6 +36,14 @@ namespace Infrastructure.Persistence.Repositories
 
 
             return type.Distinct().ToList();
+        }
+
+        public IEnumerable<Product> GetProductPriceDecrease()
+        {
+            var list = (from p in ProductContext.Product
+                        orderby p.ProductPrice descending
+                        select p);
+            return list.ToList();
         }
 
         protected ProductContext ProductContext

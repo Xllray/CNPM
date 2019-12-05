@@ -55,8 +55,7 @@ namespace Web
             });
 
 
-            //  services.AddDbContext<WebContext>(options =>
-            //         options.UseSqlServer(Configuration.GetConnectionString("WebContext")));
+            
         }//
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

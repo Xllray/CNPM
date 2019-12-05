@@ -34,7 +34,13 @@ namespace Web.Pages.Account.Info
             //neu da dang nhap
             if(HttpContext.Session.GetString("username") != null)
             {
-                userVm = _service.GetUserViewModel(id);
+
+              
+                    userVm = _service.GetUserViewModel(id);
+              
+                    
+                
+               
                 return Page();
             }
             else

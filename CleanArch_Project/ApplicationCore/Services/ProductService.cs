@@ -37,10 +37,24 @@ namespace ApplicationCore.Services
             return Products;
         }
 
-        public List<Product> GetListNewProducts()
+        public IEnumerable<ProductDto> GetProductPriceDecrease()
+        {
+            var list = _unitOfWork.Products.GetProductPriceDecrease().ToList();
+            return list.ConvertToProductDtos(); ;
+        }
+        public List<Product> GetListNewProducts(int slSPmoi)
         {
             var Products = _unitOfWork.Products.GetAll().ToList<Product>();
-            return Products;
+
+            List<Product> spnew = new List<Product>();
+            int tongsp = Products.Count;
+
+            for (int i = tongsp - 1; i > tongsp - slSPmoi - 1; --i)
+            {
+                spnew.Add(Products[i]);
+            }
+
+            return spnew;
         }
 
 

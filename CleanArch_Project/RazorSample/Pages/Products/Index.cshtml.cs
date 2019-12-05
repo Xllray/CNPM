@@ -16,17 +16,35 @@ namespace Web.Pages.Products
         [BindProperty(SupportsGet = true)]
         public string CurrentFilterProduct { get; set; }
 
-        [BindProperty(SupportsGet = true)]
-        public string typeid { get; set; }
+      
 
         [BindProperty(SupportsGet = true)]
         public string typename { get; set; }
 
+        [BindProperty(SupportsGet = true)]
+        public string sort{ get; set; }
+
         public ProductListVm ProductIndexVM { get; set; }
-        public void OnGet(int pageIndex = 1)
+        public void OnGet(int pageIndex=1)
         {
-            ProductIndexVM = _ProductService.GetProductIndexViewModel(CurrentFilterProduct, typeid, pageIndex);
+            if(sort == "giam")
+            {
+              
+                ProductIndexVM = _ProductService.GetProductPriceDecrease(CurrentFilterProduct, typename, pageIndex);
+
+            }
+            else
+            {
+                ProductIndexVM = _ProductService.GetProductIndexViewModel(CurrentFilterProduct, typename, pageIndex);
+            }
+
+          
+
+
         }
+        
+
+
 
     }
 }

@@ -7,5 +7,7 @@ namespace ApplicationCore.Interfaces
     {
         IEnumerable<User> GetListUser();
 
+        int GetCustomerid(int userId);
+
     }
 }

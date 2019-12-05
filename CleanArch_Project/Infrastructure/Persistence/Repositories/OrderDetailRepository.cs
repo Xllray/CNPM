@@ -31,6 +31,37 @@ namespace Infrastructure.Persistence.Repositories
             return orderDetailId;
         }
 
+        public IEnumerable<Product> GetProductOrderDetail(int orderid)
+        {
+            /*
+            from a in db.Customers
+            join b in db.CustomerCodes
+            on a.ID equals b.CustomerID
+            join c in db.Promotions
+            on b.PromotionID equals c.ID
+
+            select * from Product,OrderDetail,[Order]
+            where ProductId = DetailProductId and DetailOrderId =[Order].OrderId
+            and DetailOrderId = 88
+
+            */
+
+
+            //ket 3 bang product,[order],orderDetail
+
+            var product = (from p in ProductContext.Product
+                           join od in ProductContext.OrderDetail
+                           on p.ProductId equals od.DetailProductId
+                           join o in ProductContext.Order
+                           on od.DetailOrderId equals o.OrderId
+
+                           where od.DetailOrderId == orderid
+                           select p );
+
+            return product.ToList<Product>();
+
+        }
+
         public IEnumerable<int> ListProductId(int OrderId)
         {
             var ProductIds = (from o in ProductContext.OrderDetail

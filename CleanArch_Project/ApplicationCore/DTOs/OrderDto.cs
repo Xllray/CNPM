@@ -12,7 +12,7 @@ namespace ApplicationCore.DTOs
 
         public int OrderId { get; set; }
         public int OrderCustomerId { get; set; }
-        public DateTime? OrderDate { get; set; }
+        public DateTime OrderDate { get; set; }
         public virtual CustomerDto OrderCustomer { get; set; }
         public virtual ICollection<OrderDetailDto> OrderDetail { get; set; }
     }

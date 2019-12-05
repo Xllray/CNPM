@@ -34,28 +34,32 @@ namespace Web.Services
             };
         }
 
+        public ProductListVm GetProductPriceDecrease(string searchString, string genre, int pageIndex = 1)
+        {
+            var products = _service.GetProductPriceDecrease();
+            var genres = _service.GetGenres();
+            var provider = _service.GetProvider();
+
+            return new ProductListVm
+            {
+                Genres = new SelectList(genres),
+                Provider = new SelectList(provider),
+                Products = PaginatedList<ProductDto>.Create(products, pageIndex, pageSize)
+            };
+        }
+
         //lay danh sach san pham moi nhat
         public ProductListVm GetListSPMoiNhat(int slSPmoi)
         {
 
 
-            var newspList = _service.GetListNewProducts();
+            var newspList = _service.GetListNewProducts(slSPmoi);
 
-            List<Product> spnew = new List<Product>();
-            int tongsp = newspList.Count;
-
-            for (int i=tongsp -1; i>tongsp- slSPmoi-1 ; --i)
-            {
-                spnew.Add( newspList[i]);
-            }
-
-            
 
             return new ProductListVm
             {
                
-                ListProductsNew=spnew
-               
+                ListProductsNew= newspList
             };
         }
         public void DeleteProduct(int id)

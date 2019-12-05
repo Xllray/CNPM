@@ -103,14 +103,23 @@
 
 <form method="get">
     <p>
-        <select asp-for="typeid" asp-items="Model.ProductIndexVM.Genres">
+        <select asp-for="typename" asp-items="Model.ProductIndexVM.Genres">
             <option value="">All</option>
         </select>
-       
+
         Find by name: <input type="text" asp-for="CurrentFilterProduct" />
+
+
+       
+
         <input type="submit" />
+
+        <a asp-page="./index" asp-route-sort="giam">Price Decrease</a>
     </p>
 </form>
+
+
+
 
 <form method="post">
 
